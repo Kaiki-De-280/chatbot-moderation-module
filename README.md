@@ -126,6 +126,8 @@ models/model_registry.json
 
 The repository contains the source code, configuration structure, and interface required to demonstrate the architecture and logic of the moderation module.
 
+The rule-based layer can be reviewed and configured without trained model files. ML and transformer-based moderation require local trained models.
+
 ## Datasets
 
 The datasets used for model training are not distributed with this repository.
