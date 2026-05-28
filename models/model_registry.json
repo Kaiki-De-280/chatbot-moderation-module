@@ -29,13 +29,13 @@
       "type": "transformer",
       "path": "models/transformers/rubert_tiny_toxicity",
       "threshold": 0.59,
-      "description": "cointegrated/rubert-tiny-toxicity. Компактная трансфомерная модель."
+      "description": "cointegrated/rubert-tiny-toxicity. Компактная трансформерная модель."
     },
     "rubert_bcc": {
       "type": "transformer",
       "path": "models/transformers/rubert_bcc",
       "threshold": 0.3,
-      "description": "DeepPavlov/rubert-base-cased-conversational. Крупная трансфомерная модель."
+      "description": "DeepPavlov/rubert-base-cased-conversational. Крупная трансформерная модель."
     }
   }
 }
