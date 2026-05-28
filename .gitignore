@@ -1,0 +1,65 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Datasets
+data/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Trained models and model weights
+models/*
+!models/
+!models/model_registry.json
+!models/model_registry.example.json
+
+*.pkl
+*.joblib
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Local test scripts
+src/test_*.py
+tests/
+
+# Reports, generated figures and experiment outputs
+reports/
+project_context.txt
+make_project_context.py
+
+# Experiments and research scripts
+experiments/
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+temp/

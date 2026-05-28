@@ -1,0 +1,41 @@
+{
+  "default_model": "rubert_tiny_toxicity",
+  "models": {
+    "naive_bayes_char_wb": {
+      "path": "models/naive_bayes/naive_bayes.joblib",
+      "threshold": 0.5,
+      "score_type": "predict_proba",
+      "description": "MultinomialNB + TF-IDF char_wb, ngram_range=(3, 5), alpha=0.5"
+    },
+    "logreg_char_wb": {
+      "path": "models/logreg/logreg.joblib",
+      "threshold": 0.6,
+      "score_type": "predict_proba",
+      "description": "LogisticRegression + TF-IDF char_wb, ngram_range=(3, 5), C=2.0, class_weight=balanced, threshold=0.6"
+    },
+    "svm_linear_char_wb": {
+      "path": "models/svm/svm_linear.joblib",
+      "threshold": -0.2,
+      "score_type": "decision_function",
+      "description": "LinearSVC + TF-IDF char_wb, ngram_range=(3, 5), C=1.0, class_weight=None, threshold=-0.2"
+    },
+    "true_svc_linear_sampled": {
+      "path": "models/svc/true_svc.joblib",
+      "threshold": 0.175,
+      "score_type": "decision_function",
+      "description": "SVC linear + TF-IDF char_wb, trained on 20000 samples, C=1.0, class_weight=balanced"
+    },
+    "rubert_tiny_toxicity": {
+      "type": "transformer",
+      "path": "models/transformers/rubert_tiny_toxicity",
+      "threshold": 0.59,
+      "description": "cointegrated/rubert-tiny-toxicity. Компактная трансфомерная модель."
+    },
+    "rubert_bcc": {
+      "type": "transformer",
+      "path": "models/transformers/rubert_bcc",
+      "threshold": 0.3,
+      "description": "DeepPavlov/rubert-base-cased-conversational. Крупная трансфомерная модель."
+    }
+  }
+}

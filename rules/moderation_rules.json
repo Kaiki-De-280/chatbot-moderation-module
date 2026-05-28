@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "id": "email_contacts",
+      "category": "spam",
+      "enabled": true,
+      "patterns": [
+        "\\b[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}\\b"
+      ],
+      "action": "show_warning"
+    },
+    {
+      "id": "spam_links",
+      "category": "spam",
+      "enabled": true,
+      "patterns": [
+        "(?:https?://|www\\.)\\S+|\\b(?:[a-z0-9-]+\\.)+(?:ru|com|net|org|info|biz|online|site|xyz)(?:/\\S*)?"
+      ],
+      "action": "show_warning"
+    },
+    {
+      "id": "threat_keywords",
+      "category": "threat",
+      "enabled": true,
+      "patterns": [
+        "\\bугрож\\w*\\b",
+        "\\bугроз\\w*\\b",
+        "\\bубью\\b",
+        "\\bубить\\b",
+        "\\bприбью\\b",
+        "\\bзарежу\\b",
+        "\\bуничтожу\\b"
+      ],
+      "action": "block_message"
+    },
+    {
+      "id": "insult_keywords",
+      "category": "insult",
+      "enabled": true,
+      "patterns": [
+        "\\bтупой\\b",
+        "\\bтупая\\b",
+        "\\bтупые\\b",
+        "\\bидиот\\b",
+        "\\bидиотка\\b",
+        "\\bдурак\\b",
+        "\\bдура\\b",
+        "\\bдебил\\b",
+        "\\bговно\\b",
+        "\\bг0вн0\\b"
+      ],
+      "action": "show_warning"
+    },
+    {
+      "id": "aggressive_phrases",
+      "category": "aggression",
+      "enabled": true,
+      "patterns": [
+        "\\bзакрой\\s+рот\\b",
+        "\\bзаткнись\\b",
+        "\\bотвали\\b",
+        "\\bотстань\\b",
+        "\\bпошел\\s+вон\\b",
+        "\\bпошла\\s+вон\\b"
+      ],
+      "action": "show_warning"
+    }
+  ]
+}
